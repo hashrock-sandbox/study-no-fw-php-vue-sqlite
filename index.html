@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BBS</title>
+</head>
+
+<body>
+  <main id="main">
+    <h1>BBS</h1>
+    <textarea v-model="text" class="bbs__textarea"></textarea>
+    <button @click="createPost">投稿</button>
+    <div class="bbs__item" v-for="item in items">
+      <p>
+        {{item.contents}}
+      </p>
+      <p class="bbs__item__id">
+        No: {{item.id}}
+      </p>
+      <small></small>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script src="index.js">
+ </script>
+</body>
+
+</html>
